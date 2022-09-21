@@ -7,7 +7,7 @@ using System;
 
 namespace reactnet.Controllers;
 
-//[Authorize]
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class LocationsDataController : ControllerBase
