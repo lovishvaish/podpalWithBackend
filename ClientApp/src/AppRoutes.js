@@ -1,6 +1,8 @@
 import ApiAuthorzationRoutes from './components/api-authorization/ApiAuthorizationRoutes';
 import { Counter } from "./components/Counter";
 import { FetchData } from "./components/FetchData";
+import { ReportWhales } from "./components/ReportWhales";
+import { WhalesNearMe } from "./components/WhalesNearMe";
 import { Home } from "./components/Home";
 
 const AppRoutes = [
@@ -11,6 +13,15 @@ const AppRoutes = [
   {
     path: '/counter',
     element: <Counter />
+  },
+  {
+    path: '/report-whales',
+    element: <ReportWhales />
+  },
+  ,
+  {
+    path: '/whales-nearme',
+    element: <WhalesNearMe />
   },
   {
     path: '/fetch-data',
