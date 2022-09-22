@@ -7,7 +7,7 @@ using System;
 
 namespace reactnet.Controllers;
 
-[Authorize]
+//[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class LocationsDataController : ControllerBase
@@ -26,20 +26,15 @@ public class LocationsDataController : ControllerBase
         return await _context.locations.ToListAsync();
     }
 
-    // [HttpGet]
-    // public async Task<ActionResult<Location>> GetLocation(int id)
-    // {
-    //     var location = await _context.locations.FindAsync(id);
-    //     if (location == null)
-    //     {
-    //         return null;
-    //     }
-    //     return location;
-    // }
-
     [HttpPost]
-    public async Task<ActionResult<Location>> PostNote(Location loc)
+    public async Task<ActionResult<Location>> PostNote(string id, string latitude, string longitude)
     {
+        var loc = new Location 
+        {
+            id =   Int32.Parse(id),
+            longitude = Int32.Parse(longitude),
+            latitude= Int32.Parse(latitude)
+        };
         Console.WriteLine(loc);
         _context.locations.Add(loc);
         await _context.SaveChangesAsync();
