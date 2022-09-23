@@ -5,16 +5,16 @@ export class ReportWhales extends Component {
   reportWhales() {
     let latitude = document.getElementById("latitude").value;
     let longitude = document.getElementById("longitude").value;
-    let id= Math.floor(Math.random() * 100);;
-  let requestUrl=  "https://localhost:7146/api/LocationsData?id="+id+"&latitude="+latitude+"&longitude="+longitude;
+    let id = Math.floor(Math.random() * 100);;
+    let requestUrl = "https://localhost:7146/api/LocationsData?id=" + id + "&latitude=" + latitude + "&longitude=" + longitude;
 
     // Send data to the backend via POST
     fetch(requestUrl, {  // Enter your IP address here
 
-      headers: {'Accept': 'application/json','Content-Type': 'application/json', 'charset': 'UTF-8'},
-      method: 'POST', 
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', 'charset': 'UTF-8' },
+      method: 'POST',
       mode: 'no-cors'
-    })   
+    })
   }
 
   render() {

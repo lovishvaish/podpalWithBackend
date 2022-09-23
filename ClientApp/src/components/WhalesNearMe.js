@@ -33,17 +33,17 @@ export class WhalesNearMe extends Component {
         <h1>Whales near me!</h1>
         <button className="btn btn-primary" onClick={this.getData}>Get Data</button>
         <BingMapsReact
-      bingMapsKey="Amhldcz34o9Q9k3vkKXOIYjgCXLxYJBf5asYmNXL6up5tPOFKmWuRQI9ZUppfoSU"
-      height="1000px"
-      mapOptions={{
-        navigationBarMode: "square",
-      }}
-      width="1000px"
-      viewOptions={{
-        center: { latitude: 42.360081, longitude: -71.058884 },
-        mapTypeId: "grayscale",
-      }}
-    />        
+          bingMapsKey="Amhldcz34o9Q9k3vkKXOIYjgCXLxYJBf5asYmNXL6up5tPOFKmWuRQI9ZUppfoSU"
+          height="1000px"
+          mapOptions={{
+            navigationBarMode: "square",
+          }}
+          width="1000px"
+          viewOptions={{
+            center: { latitude: 42.360081, longitude: -71.058884 },
+            mapTypeId: "road",
+          }}
+        />
         {/* <body>
           <div id="divMap" style="position:relative;width:400px;   height:400px;border:1px solid blue;"></div>
         </body> */}
